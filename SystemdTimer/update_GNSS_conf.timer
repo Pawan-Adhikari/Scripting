@@ -1,0 +1,11 @@
+[Unit]
+Description="Timer for GNSS sampling update script invocation"
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=20min
+Persistent=True
+Unit=update_GNSS_conf.service
+
+[Install]
+WantedBy=timers.target

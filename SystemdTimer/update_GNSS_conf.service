@@ -1,0 +1,9 @@
+[Unit]
+Description="GNSS update script"
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=glstation
+ExecStart=/usr/local/bin/update_GNSS_conf.sh
